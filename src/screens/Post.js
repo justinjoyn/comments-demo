@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addComment } from '../ducks/posts';
+import { addComment, clap } from '../ducks/post';
 import '../styles/post.css';
 
 class Post extends Component {
@@ -14,9 +14,8 @@ class Post extends Component {
     }
 
     static getDerivedStateFromProps(props) {
-        const { posts } = props;
         return {
-            post: posts[0]
+            post: props.post
         };
     }
 
@@ -105,14 +104,14 @@ class Post extends Component {
         const { post } = this.state;
         return (
             <div className="ClapsContainer">
-                <button className="ClapButton">
+                <button className="ClapButton" onClick={() => this.props.clap({ postId: post.id })}>
                     <img
                         src={require('../assets/images/clapping.svg')}
                         alt="Clap"
                         className="Clap"
                     />
                 </button>
-                <span className="ClapCount">0</span>
+                <span className="ClapCount">{post.claps}</span>
             </div>
         );
     }
@@ -135,12 +134,13 @@ class Post extends Component {
 
 const mapDispatchToProps = dispatch => {
     return {
-        addComment: payload => dispatch(addComment(payload))
+        addComment: payload => dispatch(addComment(payload)),
+        clap: payload => dispatch(clap(payload))
     };
 };
 
 const mapStateToProps = state => ({
-    posts: state.postsReducer.posts
+    post: state.postReducer.post
 });
 
 export default connect(
