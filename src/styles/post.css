@@ -1,0 +1,201 @@
+.Container {
+    width: 75%;
+    margin: auto;
+    padding-bottom: 300px;
+}
+
+.PostBody {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 1.2em;
+    color: #222222;
+}
+
+.TagsContainer {
+    display: flex;
+    flex-direction: row;
+}
+
+.Tag {
+    padding: 5px 10px;
+    margin-right: 10px;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    color: #222222;
+}
+
+.ClapsContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.ClapButton {
+    outline: none;
+    border: 1px solid #f0f0f0;
+    background-color: transparent;
+    height: 60px;
+    width: 60px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.Clap {
+    height: 30px;
+    width: 30px;
+}
+
+.ClapCount {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    padding-left: 15px;
+}
+
+.Divider {
+    height: 1px;
+    background-color: #f0f0f0;
+    border: none;
+    margin: 20px 0 30px 0;
+}
+
+.SectionHeading {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.CommentButton {
+    display: block;
+    width: 100%;
+    outline: none;
+    background-color: #ffffff;
+    border: none;
+    border: 1px solid #f0f0f0;
+    margin-top: 20px;
+    border-radius: 5px;
+}
+
+.CommentButtonContent {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+.CommentButtonIcon {
+    width: 18px;
+}
+
+.CommentButtonText {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 300;
+    margin-left: 15px;
+}
+
+.CommentInputContainer {
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.CommentInput {
+    width: 100%;
+    outline: none;
+    border: none;
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: #222222;
+    resize: none;
+}
+
+.Comments {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+.CommentContainer {
+    display: block;
+    background-color: #ffffff;
+    border: 1px solid #f0f0f0;
+    margin-top: 20px;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.CommentUserContainer {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.CommentUserImage {
+    height: 30px;
+    width: 30px;
+    border-radius: 15px;
+}
+
+.CommentUserName {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 15px;
+    color: #8bc880;
+}
+
+.CommentText {
+    font-family: 'Roboto Slab', serif;
+    font-weight: 300;
+    font-size: 1em;
+    color: #222222;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .Container {
+        width: 95%;
+        margin: auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .Container {
+        width: 90%;
+        margin: auto;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .Container {
+        width: 85%;
+        margin: auto;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .Container {
+        width: 80%;
+        margin: auto;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .Container {
+        width: 65%;
+        margin: auto;
+    }
+}
